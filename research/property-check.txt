@@ -1,0 +1,6 @@
+cases checked: 68,921
+P1 pays no more than the invoice and no more than ERS: holds in every case
+P2 overpayment occurs if and only if both records are too high: holds in every case
+P3 any single wrong record never causes overpayment: holds in all 3,321 such cases
+P4 lesser-of overpays more than a perfect gate in 18,278 cases (26.5% of the grid), all with both records too high and more than tolerance apart
+P5 every shortfall comes from a record below the truth, so the supplier is the party hurt

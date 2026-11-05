@@ -1,0 +1,34 @@
+Paired differences over 10 seeds, per 100,000 synthetic invoices. Positive means the second policy is cheaper.
+
+| World | Pair | Measure | Mean | Std dev of pair | Seeds second is cheaper |
+|---|---|---|---|---|---|
+| step 2 | T+ to S | buyer_total | 25,971 | 12,049 | 10/10 |
+| step 2 | T+ to S | joint_total | 31,605 | 9,968 | 10/10 |
+| step 2 | T+ to S | overpaid | 10,104 | 6,609 | 10/10 |
+| step 2 | S to Sc | buyer_total | 34,999 | 1,056 | 10/10 |
+| step 2 | S to Sc | joint_total | 79,169 | 5,882 | 10/10 |
+| step 2 | S to Sc | overpaid | -598 | 320 | 0/10 |
+| step 2 | Tc to Sc | buyer_total | 12,636 | 11,271 | 9/10 |
+| step 2 | Tc to Sc | joint_total | 18,764 | 10,566 | 10/10 |
+| step 2 | Tc to Sc | overpaid | 9,506 | 6,555 | 10/10 |
+| step 2 | | spend per 100,000 invoices | 533,700,763 | | |
+| step 3 | T+ to S | buyer_total | 21,604 | 13,721 | 10/10 |
+| step 3 | T+ to S | joint_total | 11,877 | 12,869 | 9/10 |
+| step 3 | T+ to S | overpaid | 14,468 | 6,309 | 10/10 |
+| step 3 | S to Sc | buyer_total | 93,526 | 17,238 | 10/10 |
+| step 3 | S to Sc | joint_total | 148,033 | 16,429 | 10/10 |
+| step 3 | S to Sc | overpaid | 54,332 | 16,339 | 10/10 |
+| step 3 | Tc to Sc | buyer_total | 7,777 | 11,951 | 8/10 |
+| step 3 | Tc to Sc | joint_total | 11,658 | 24,350 | 7/10 |
+| step 3 | Tc to Sc | overpaid | 12,388 | 6,513 | 10/10 |
+| step 3 | | spend per 100,000 invoices | 533,700,763 | | |
+| step 3, 5% padders | T+ to S | buyer_total | 173,424 | 38,701 | 10/10 |
+| step 3, 5% padders | T+ to S | joint_total | 185,543 | 42,044 | 10/10 |
+| step 3, 5% padders | T+ to S | overpaid | 150,765 | 28,562 | 10/10 |
+| step 3, 5% padders | S to Sc | buyer_total | 93,429 | 17,535 | 10/10 |
+| step 3, 5% padders | S to Sc | joint_total | 148,202 | 16,899 | 10/10 |
+| step 3, 5% padders | S to Sc | overpaid | 54,420 | 16,495 | 10/10 |
+| step 3, 5% padders | Tc to Sc | buyer_total | 169,513 | 38,541 | 10/10 |
+| step 3, 5% padders | Tc to Sc | joint_total | 198,277 | 55,822 | 10/10 |
+| step 3, 5% padders | Tc to Sc | overpaid | 156,818 | 30,061 | 10/10 |
+| step 3, 5% padders | | spend per 100,000 invoices | 533,700,763 | | |

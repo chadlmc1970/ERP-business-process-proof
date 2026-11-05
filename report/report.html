@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2026-11-04" />
+  <title>Enterprise Process Conjecture</title>
+  <style>
+
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+  <style type="text/css">@page { size: Letter; margin: 0.8in 0.85in; }
+:root { --ink: #1c2430; --muted: #5b6675; --accent: #1f4e79; --rule: #d5dbe3; --tint: #f3f6fa; }
+body { font-family: Georgia, "Times New Roman", serif; font-size: 10.5pt; line-height: 1.45; color: var(--ink); background: #fff; max-width: none; margin: 0; }
+header#title-block-header { padding: 1.2in 0 0.4in; border-bottom: 2px solid var(--accent); margin-bottom: 0.3in; }
+header#title-block-header h1 { border-bottom: none; }
+h1.title { font-family: Helvetica, Arial, sans-serif; font-size: 30pt; line-height: 1.1; color: var(--accent); margin: 0 0 8pt; }
+p.subtitle { font-family: Helvetica, Arial, sans-serif; font-size: 14pt; color: var(--ink); margin: 0 0 8pt; }
+p.date { font-family: Helvetica, Arial, sans-serif; font-size: 10pt; color: var(--muted); margin: 0; }
+h1, h2 { font-family: Helvetica, Arial, sans-serif; color: var(--accent); break-after: avoid; }
+h1 { font-size: 15pt; margin: 20pt 0 6pt; padding-bottom: 3pt; border-bottom: 1px solid var(--rule); }
+p { margin: 0 0 7pt; orphans: 3; widows: 3; }
+ul { margin: 0 0 8pt; padding-left: 16pt; }
+li { margin-bottom: 3pt; }
+blockquote { margin: 6pt 0 10pt; padding: 8pt 12pt; background: var(--tint); border-left: 3px solid var(--accent); }
+blockquote p { margin-bottom: 4pt; }
+table { width: 100%; border-collapse: collapse; margin: 6pt 0 11pt; font-family: Helvetica, Arial, sans-serif; font-size: 8.3pt; line-height: 1.3; }
+th { background: var(--accent); color: #fff; text-align: left; padding: 4pt 5pt; font-weight: 600; }
+td { padding: 3.5pt 5pt; border-bottom: 1px solid var(--rule); vertical-align: top; }
+tr { break-inside: avoid; }
+thead { display: table-header-group; }
+code { font-family: Menlo, Consolas, monospace; font-size: 8.8pt; }
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">The Enterprise Process Conjecture</h1>
+<p class="subtitle">A first-principles challenge to the three-way match</p>
+<p class="date">November 4, 2026</p>
+</header>
+<p><strong>How to read the tags.</strong> Every major finding carries one of four labels. <strong>Established:</strong> directly supported by reliable sources or reproducible testing. <strong>Supported hypothesis:</strong> plausible, with meaningful evidence, not demonstrated. <strong>Speculative:</strong> interesting, needs substantial work. <strong>Rejected:</strong> contradicted by evidence, testing or constraints. All simulation figures are synthetic, per 100,000 invoices, on stated assumptions. They show how the argument behaves. They are not forecasts or benchmarks.</p>
+<h1 id="executive-discovery">1. Executive Discovery</h1>
+<p>The three-way match bundles four separate decisions into one, and only one of them is worth keeping in its current form. Comparing the purchase order, receipt and invoice on every transaction should stay. The other three should change: stopping the whole invoice when only the difference is in doubt, working exceptions one document at a time, and publishing a tolerance that a dishonest supplier can bill up to.</p>
+<p>The central assumption challenged was that a mismatch must be resolved before money moves. It is not required by any statute, SEC rule, PCAOB standard or UCC section I could read. For the amount in dispute, holding the money remains sensible. For the rest of the invoice, I found no reason to hold it beyond an old habit.</p>
+<p>My first answer failed. “Pay the lesser amount and make the supplier claim the rest” was rejected in adversarial review. It is already Medicare law, an SAP function and standard big-box retail practice, and it moves cost onto suppliers rather than removing it.</p>
+<p>The rebuilt process, Split Settlement, survived better, but its honest gain is modest: about 0.2 basis points of spend in a world of honest suppliers, inside the noise of the model. It is worth much more only if suppliers really do bill to the tolerance, which nobody has measured.</p>
+<p>The larger finding was unexpected. In the model, cleaning the buyer’s own records was worth about twelve times more than changing the rule. In the one real log available, about 80% of payment blocks ended with no document corrected. The match is presented as a check on suppliers. The evidence suggests it mostly reports errors in the buyer’s own records.</p>
+<p><strong>Verdict: B, meaningful optimization.</strong> The machine survives, with one part removed.</p>
+<h1 id="why-this-process">2. Why This Process?</h1>
+<p>Eleven candidates were scored from 1 to 5 on ten criteria. Scores are analyst judgment, not measurements. The last two criteria are inverted risks, so 5 means low risk of confusing law with habit, and low chance the idea already exists.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate</th>
+<th>Std</th>
+<th>Breadth</th>
+<th>Econ</th>
+<th>Legacy</th>
+<th>Handoffs</th>
+<th>Room</th>
+<th>Testable</th>
+<th>Impact</th>
+<th>Law clarity</th>
+<th>Novelty</th>
+<th>Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Three-way match</strong></td>
+<td>5</td>
+<td>5</td>
+<td>4</td>
+<td>5</td>
+<td>5</td>
+<td>4</td>
+<td>5</td>
+<td>4</td>
+<td>4</td>
+<td>2</td>
+<td><strong>43</strong></td>
+</tr>
+<tr>
+<td>Delegated approval chains</td>
+<td>3</td>
+<td>5</td>
+<td>4</td>
+<td>5</td>
+<td>5</td>
+<td>4</td>
+<td>3</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+<td>39</td>
+</tr>
+<tr>
+<td>Annual budgeting</td>
+<td>3</td>
+<td>5</td>
+<td>5</td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+<td>2</td>
+<td>5</td>
+<td>5</td>
+<td>2</td>
+<td>39</td>
+</tr>
+<tr>
+<td>Periodic financial close</td>
+<td>4</td>
+<td>5</td>
+<td>5</td>
+<td>4</td>
+<td>5</td>
+<td>3</td>
+<td>3</td>
+<td>5</td>
+<td>2</td>
+<td>2</td>
+<td>38</td>
+</tr>
+<tr>
+<td>Intercompany reconciliation</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+<td>5</td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+<td>3</td>
+<td>4</td>
+<td>2</td>
+<td>36</td>
+</tr>
+</tbody>
+</table>
+<p>The three-way match won because it is highly standardized, is performed at very high volume, rests on old assumptions, and can be tested on synthetic data and a public event log. Its weakness showed in the score from the start: novelty headroom of 2. That proved accurate.</p>
+<p>Frame: US public mid or large company, SOX, US GAAP, external audit.</p>
+<h1 id="the-conventional-model">3. The Conventional Model</h1>
+<p><strong>What it is.</strong> A buyer compares its purchase order, its goods receipt and the supplier’s invoice before paying. If they agree within tolerance the invoice pays. If not, payment stops until a person resolves it. <strong>Established</strong>, from Oracle and SAP documentation.</p>
+<p><strong>Why it exists.</strong> Once the person who orders, the person who receives and the person who pays are different people, no one knows all three facts. Paying on the seller’s word means trusting the party who benefits.</p>
+<p><strong>History. Established from primary texts.</strong> The three-document logic appears in Kirkman’s railway supply manual in 1887. Montgomery’s 1912 audit text gives nearly the modern control in one paragraph. Griffith wrote in 1917 that “Vouchers should never be made for invoices in dispute”, the ancestor of the payment block. The American Institute of Accountants named a clerk “whose job is to match invoices, purchase orders and receiving reports” in 1949. The term “three-way match” is confirmed in 1977 software advertising. SOX did not create it, and it is not primarily a fraud control: the early sources stress shortage and clerical error, and Kirkman doubted its value against collusion in 1887. The origin of tolerances could not be found.</p>
+<p><strong>The conventional sequence.</strong></p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Step</th>
+<th>Owner</th>
+<th>Decision or handoff</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1-2</td>
+<td>Requisition raised and approved</td>
+<td>Requester, budget owner</td>
+<td>Approve, reject, return</td>
+</tr>
+<tr>
+<td>3</td>
+<td>PO issued</td>
+<td>Buyer</td>
+<td>Vendor, price, terms; handoff to vendor</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Vendor ships</td>
+<td>Vendor</td>
+<td>Handoff to dock</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Goods received, counted, posted</td>
+<td>Receiving or requester</td>
+<td>Accept, reject, partial; accrual posted</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Invoice captured, duplicate check</td>
+<td>AP</td>
+<td>Handoff to matching</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Match line by line</td>
+<td>System</td>
+<td>Within tolerance? If yes go to 12</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Whole invoice blocked</td>
+<td>System</td>
+<td>Payment stops; the supplier’s clock keeps running</td>
+</tr>
+<tr>
+<td>9-10</td>
+<td>Exception triaged, cause checked</td>
+<td>AP clerk, buyer, receiver, vendor</td>
+<td>Who is right? Mostly email and phone</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Resolved, block released</td>
+<td>AP or manager</td>
+<td>Release or reject</td>
+</tr>
+<tr>
+<td>12-14</td>
+<td>Posted, proposed, paid</td>
+<td>System, treasury</td>
+<td>Pay, hold, take discount</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Clear and reconcile</td>
+<td>AP, GL</td>
+<td>Accrual, audit sample</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Law versus custom. Established for texts read.</strong> Exchange Act 13(b)(2), SOX 302 and 404, Rule 13a-15(f), SEC Release 33-8810 and AS 5 (now AS 2201) require outcomes: accurate books, authorized spending, reasonable assurance. None names the match. The filed text of AS 5 contains the words “invoice”, “purchase order” and “matching” zero times. AS 2201 says testing depends on whether controls address the risk “rather than on how the control is labeled”. The only official text found that requires the match by name is a Bureau of Indian Affairs manual. COSO 2013 could not be read in full. Under UCC Article 2 the debt arises from contract plus acceptance, and “The buyer must pay at the contract rate for any goods accepted” (2-607(1)). The invoice is a demand, not the source of the debt. Once a company names the match a key SOX control it must operate, which is why it feels mandatory: DXP Enterprises reported a weakness in 2024 over clearing match discrepancies.</p>
+<p><strong>What it does not address.</strong> Payment to a fraudster’s bank account, collusion, and forged documents. McKesson &amp; Robbins showed in 1938 that documents can agree perfectly because the fraudsters wrote all of them.</p>
+<h1 id="the-hidden-assumptions">4. The Hidden Assumptions</h1>
+<p>Load is a 1 to 5 judgment of how much of the process rests on the assumption.</p>
+<table>
+<thead>
+<tr>
+<th>Assumption</th>
+<th>Class</th>
+<th>Load</th>
+<th>What would settle it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Money leaves only against evidence of an obligation</td>
+<td>Necessary</td>
+<td>5</td>
+<td>A viable firm with no evidence and no recourse. None found</td>
+</tr>
+<tr>
+<td>Agreement among records is evidence of truth</td>
+<td>Unproven</td>
+<td>5</td>
+<td>Seed known errors and measure how many pass</td>
+</tr>
+<tr>
+<td>The three records are independent</td>
+<td>Contingent</td>
+<td>5</td>
+<td>Measure how often one record was copied from another</td>
+</tr>
+<tr>
+<td>Per-transaction checking pays</td>
+<td>Contingent</td>
+<td>5</td>
+<td>Measure cost, error rate, catch rate and size by category</td>
+</tr>
+<tr>
+<td>Holding cash beats chasing it</td>
+<td>Contingent</td>
+<td>4</td>
+<td>Measure net recovery by supplier class</td>
+</tr>
+<tr>
+<td>A mismatch means something is wrong</td>
+<td>Unproven</td>
+<td>4</td>
+<td>Classify exceptions by true cause</td>
+</tr>
+<tr>
+<td>The PO fully states what is owed</td>
+<td>Unproven</td>
+<td>4</td>
+<td>Share of exceptions fixed by changing the PO</td>
+</tr>
+<tr>
+<td>The invoice line is the right unit of control</td>
+<td>Conventional</td>
+<td>4</td>
+<td>Compare line and running-balance control</td>
+</tr>
+<tr>
+<td>The whole invoice must wait</td>
+<td>Historical</td>
+<td>4</td>
+<td>Loss and cost when only the difference waits</td>
+</tr>
+<tr>
+<td>Fixed order: order, receipt, invoice, match, pay</td>
+<td>Conventional</td>
+<td>4</td>
+<td>Already reversed by C.O.D., letters of credit, fast pay</td>
+</tr>
+<tr>
+<td>A false hold costs nothing</td>
+<td>Unproven</td>
+<td>3</td>
+<td>Prices of similar suppliers with different dispute rates</td>
+</tr>
+<tr>
+<td>A tolerance protects without being exploited</td>
+<td>Unproven</td>
+<td>3</td>
+<td>Distribution of overbills just under the limit</td>
+</tr>
+<tr>
+<td>Comparing is slow</td>
+<td>Historical</td>
+<td>3</td>
+<td>Solved for structured data</td>
+</tr>
+<tr>
+<td>Software forced this design</td>
+<td>Rejected as origin</td>
+<td>2</td>
+<td>The design is in print by 1912</td>
+</tr>
+</tbody>
+</table>
+<p>The most central are the first three. The most exposed is “agreement implies truth”. The one nobody defends when asked is that the whole invoice must wait.</p>
+<p><strong>Schema and semantic drift. Supported hypothesis.</strong> Schema drift fails loudly: a new field breaks a parser. Semantic drift fails silently. “PO exists” once meant prior authorization, but an after-the-fact PO keeps the field and loses the meaning. “Received” may mean counted at the dock or clicked by someone clearing a block. The match compares values, not meanings, so it keeps passing while its evidence erodes.</p>
+<p><strong>The deeper data problem. Supported hypothesis.</strong> No record stores the obligation itself. The PO is a commitment, the receipt an observation, the invoice a claim. What is owed is inferred by comparing three shadows of it. A single stateful record of the obligation would remove mismatches caused by representation, such as timing, partial delivery and approved changes. It would not remove the need for independent evidence, and a shared record could destroy the independence that makes comparison worth anything. An ontology names distinctions. It produces no evidence. <strong>Rejected:</strong> the claim that a better data model alone solves verification.</p>
+<h1 id="the-central-conjecture">5. The Central Conjecture</h1>
+<p>The strongest fair form, deliberately not weakened:</p>
+<blockquote>
+<p>To settle every true obligation in the right amount, to the entitled party, at the best time, and to state what is owed correctly at every reporting date, with reasonable assurance and at a total cost below the loss prevented, where suppliers and insiders hold private information and may gain by misstating it, where money paid is harder to recover than money held, and where outsiders must be able to rely on the result, an organization must:</p>
+<p><strong>A.</strong> Establish in advance, with authority, what will be owed.</p>
+<p><strong>B.</strong> Obtain evidence of performance independent of the claimant.</p>
+<p><strong>C.</strong> Bind the claim to that obligation and confirm the claimant.</p>
+<p><strong>D.</strong> Compare A, B and C for every transaction above a trivial value, by a fixed rule interested parties cannot waive.</p>
+<p><strong>E.</strong> Withhold the disputed amount until the difference is resolved.</p>
+<p><strong>F.</strong> Send differences to someone with authority and no conflict.</p>
+<p><strong>G.</strong> Keep evidence an outsider can re-perform.</p>
+</blockquote>
+<p>This form explains why the process has lasted over a century. A universal rule gives detection, deterrence and commitment in one step, and it is cheap to prove to an auditor. Note clause E says the disputed amount. Practice goes further and holds the whole invoice. That gap became the most useful thing found.</p>
+<h1 id="the-challenge">6. The Challenge</h1>
+<p><strong>Counterexamples.</strong> Federal fast pay pays “prior to the Government’s verification”, capped and with recourse. Evaluated receipt settlement drops the invoice. Procurement cards drop the match for low value. GAO has accepted sampling since the 1960s. So “it must be done in this form” is false. <strong>Established.</strong> But every counterexample keeps the core (authority, independent evidence, recourse, proof). No precedent found omits verification. Ford’s famous case removed the invoice, not the match: Hammer says 14 items became three, still automatic and still before payment. <strong>Rejected:</strong> “Ford eliminated the match.”</p>
+<p><strong>Six alternatives investigated.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Approach</th>
+<th>Principle</th>
+<th>Rejects</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Audit and recover</td>
+<td>Deterrence</td>
+<td>Every mismatch needs a person first</td>
+<td>Live rival. Strong evidence outside AP, none inside</td>
+</tr>
+<tr>
+<td>Buyer-computed settlement (ERS)</td>
+<td>No second version of truth</td>
+<td>Seller’s document triggers payment</td>
+<td>Proven and narrow. Moves the check to the dock and loses the second opinion</td>
+</tr>
+<tr>
+<td>Contract and trusted status</td>
+<td>Move the risk</td>
+<td>Buyer carries each transaction</td>
+<td>Enabling layer only. Does nothing alone</td>
+</tr>
+<tr>
+<td>Population monitoring</td>
+<td>Process control</td>
+<td>Assurance is a sum of document checks</td>
+<td>Essential companion, weak replacement. Kogan et al. found high misses at small error sizes</td>
+</tr>
+<tr>
+<td>Physical event evidence</td>
+<td>Verify reality, not paper</td>
+<td>Agreeing records prove value received</td>
+<td>Strong truth, narrow and costly</td>
+</tr>
+<tr>
+<td>Balance settlement with true-up</td>
+<td>Change the unit of account</td>
+<td>Payment maps to transactions</td>
+<td>Elegant for steady relationships. Credit exposure limits it</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The failed attempt: lesser-of settlement. Rejected.</strong> My first proposal was to pay the lower of the invoice and the buyer’s record on the due date and let suppliers claim the rest. It looked excellent: cheapest in every cell of my own simulation. That result was too good, so it went to an independent adversarial reviewer, which found:</p>
+<ul>
+<li><strong>It is not new. Established.</strong> 42 CFR 414.21: “Medicare payment is based on the lesser of the actual charge or the applicable fee schedule amount.” UC Accounting Manual D-371-36 says the same for invoices. SAP invoice reduction automates it. Walmart Code 11 and Amazon shortage claims run it at scale (vendor sources).</li>
+<li><strong>Seventeen biases in my model favored it.</strong> The largest: I charged nothing for its own audit step, and my rival audit design was not really sampling.</li>
+<li><strong>It moves cost rather than removing it.</strong> At moderate friction it saved the buyer $9,650 and cost suppliers $132,701 more, about $13.75 per dollar saved.</li>
+<li><strong>Burden shifting has a bad record. Established.</strong> The UK Groceries Code Adjudicator found Tesco repaying acknowledged debts up to 24 months late, with margin hit when suppliers abandoned claims, and ruled that “Tesco must not make unilateral deductions.” In Medicare Advantage only 1% of denials were appealed and 75% of appeals were overturned. Rite Aid booked unearned vendor credits as income. So my claim that suppliers would reliably report shortfalls was wrong: motive depends on the claim being worth filing.</li>
+<li><strong>It trips four rejection conditions:</strong> already standard, no better than simple optimization, benefits vanish, worse on joint cost.</li>
+</ul>
+<p><strong>What survived the failure.</strong> A single wrong record cannot cause an overpayment under this rule, the rule is easy to audit, and the same payment rule with the buyer doing the work beat the supplier-claim version on joint cost in all 240 test worlds. The burden shift was the defect.</p>
+<p><strong>Other ideas rejected.</strong> Sampling the comparison (cheap comparison favors checking everything). Shared ledgers (a shared record of PO and receipt is Ford’s database again, the dock still needs a trusted reporter, and several trade networks closed). AI making the match unnecessary (no vendor claims it, no independent evaluation exists).</p>
+<h1 id="the-discovery">7. The Discovery</h1>
+<p><strong>The assumption that no longer appears necessary:</strong> that a disagreement about part of an invoice justifies stopping all of it.</p>
+<p>The practice traces to a paper voucher that could not be split: one document, one signature, one payment. <strong>Speculative as to cause. Established as to the 1917 rule.</strong> The law does not require it. The debt on accepted goods exists regardless of an internal block, and a block does not stop acceptance (UCC 2-606, my reading). Comparison is now close to free and a payment can be split at no cost, yet every ERP still holds the document. Clause E of the conjecture survives. The habit built on top of it does not.</p>
+<p><strong>The assumption that remains necessary:</strong> independent evidence and a universal machine comparison. Every attempt to remove them failed, and cheaper computing strengthens them.</p>
+<p><strong>The insight that matters more:</strong> the match mostly reports on the buyer. In the one real log available, 26.5% of invoiced three-way items were blocked. About 80% of blocks showed no correction to any document. About 7% showed the invoice corrected, and about 13% showed a change to another record. Of blocks with any document change, 65% changed something other than the invoice. <strong>Established for the counts. Supported hypothesis for the reading.</strong> It is one Dutch-based company, without dollar values or reason codes. Federal data points the same way: of $351 million returned by 39 contractors, 77% traced to contract administration and 18% to billing or payment errors. The analogy is loose.</p>
+<p>In the model, the same pattern holds by a wide margin:</p>
+<table>
+<thead>
+<tr>
+<th>Change, moderate friction, 10 seeds, per 100,000 invoices</th>
+<th>Joint saving</th>
+<th>Share of spend</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Change the rule (T+ to Split Settlement), honest suppliers</td>
+<td>$11,877 (std dev $12,869)</td>
+<td>about 0.2 bp</td>
+</tr>
+<tr>
+<td>Clean the buyer’s records (70% fewer record errors)</td>
+<td>$148,033 (std dev $16,429)</td>
+<td>about 2.8 bp</td>
+</tr>
+<tr>
+<td>Change the rule, 5% of suppliers billing to the tolerance</td>
+<td>$185,543 (std dev $42,044)</td>
+<td>about 3.5 bp</td>
+</tr>
+</tbody>
+</table>
+<p>Cleaning is treated as free in this table, which flatters it. Its real cost is unknown.</p>
+<h1 id="a-different-purpose">8. A Different Purpose</h1>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Original</th>
+<th>Proposed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Purpose</td>
+<td>Confirm the documents agree before paying</td>
+<td>Keep a true record of what is owed, and pay it</td>
+</tr>
+<tr>
+<td>Who is being checked</td>
+<td>The supplier</td>
+<td>The buyer’s records first, the supplier second</td>
+</tr>
+<tr>
+<td>What a mismatch is</td>
+<td>A reason to stop</td>
+<td>A defect report with an owner</td>
+</tr>
+<tr>
+<td>Measure of success</td>
+<td>Match rate, cycle time</td>
+<td>Dollars misallocated, repeat causes, share of blocks with a real correction</td>
+</tr>
+</tbody>
+</table>
+<p>This is a real change of emphasis, but I stop short of claiming it as outcome E. <strong>Supported hypothesis.</strong> It rests on one company’s log and a model. If a dollar-weighted study showed most blocks catch real supplier errors, the original purpose stands.</p>
+<h1 id="the-reconstructed-operating-model-split-settlement">9. The Reconstructed Operating Model: Split Settlement</h1>
+<p>Designed from the objective, not from the old steps. Activities came back only where something required them.</p>
+<p><strong>Scope.</strong> Repeat PO-backed goods with a reliable record. Services, non-PO spend and variable pricing keep their current control.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Step</th>
+<th>Who</th>
+<th>Why it exists</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Hard gates.</strong> Real supplier, verified bank details, authorized commitment, something received, not a duplicate. Fail any one and nothing pays</td>
+<td>System</td>
+<td>Conjecture clauses A, B and C. Payee check is added because the match never covered it</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Compare everything,</strong> both directions, on arrival, not at the end</td>
+<td>System</td>
+<td>Clause D. Near free</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Small differences pass,</strong> up to the same limit as the simple fix</td>
+<td>System</td>
+<td>Pennies are not worth a person</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Watch the passes.</strong> A running one-sided sum per supplier revokes the pass and opens a case. A limit that is watched stops being a safe harbor</td>
+<td>System</td>
+<td>Closes the tolerance gap</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>One case per supplier per period,</strong> grouped by likely cause, owned by the party who can fix it. Stale record goes to the buyer. A supplier is asked only when its own invoice looks wrong</td>
+<td>Buyer</td>
+<td>Moves the unit of work from document to cause. No supplier claim process</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Work the case inside terms.</strong> Fix the record, and every line it touched corrects itself. Late receipts true up automatically</td>
+<td>Buyer</td>
+<td>Uses the credit period the old process already has</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>At the due date, pay what is not in doubt.</strong> Only the difference waits, as an open payable</td>
+<td>System</td>
+<td>Clause E, applied as written</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>Circuit breaker.</strong> A sudden spike in differences for a supplier or item is treated as one record fault, and short payments stop until a person looks</td>
+<td>System and buyer</td>
+<td>Stops a bad price upload becoming thousands of short payments</td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>Small random audit</strong> of receipts and passes, chosen by plain random draw</td>
+<td>Internal audit</td>
+<td>Covers the case where both records are wrong together, and measures the true error rate</td>
+</tr>
+<tr>
+<td>10</td>
+<td><strong>Report repeat causes</strong> to the people who own the records, in dollars</td>
+<td>Finance</td>
+<td>Serves the new purpose</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Controls kept unchanged.</strong> Segregation of duties, vendor master and bank-change control, payment authorization, retention, period-end accrual. The open difference stays a recorded payable, so nothing reaches income through abandonment.</p>
+<p><strong>Buyer accountability.</strong> Interest on any difference that was the buyer’s error, and a measure of buyer-fault differences that reaches the CFO. Claim outcomes stay away from buyer margin targets. Tesco is the reason.</p>
+<p><strong>What changes for a supplier.</strong> On a stale price, it may receive part of an invoice on time instead of none of it late, and it never files a claim.</p>
+<h1 id="the-role-of-ai">10. The Role of AI</h1>
+<p>Almost nothing at the core of this process needs AI. That is a finding, not a gap.</p>
+<table>
+<thead>
+<tr>
+<th>Capability</th>
+<th>Where used</th>
+<th>Needed?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deterministic computing</td>
+<td>Gates, comparison, pass limit, payment split, running sums, random draw, true-up</td>
+<td><strong>Core, and should stay non-AI.</strong> Auditable, cheap to prove, cannot be talked around</td>
+</tr>
+<tr>
+<td>Classification</td>
+<td>Sorting differences by likely cause in step 5</td>
+<td>Useful. Rules first, models where rules run out</td>
+</tr>
+<tr>
+<td>Retrieval</td>
+<td>Pulling the contract clause, amendment or email behind a difference</td>
+<td>Useful, likely the best fit today</td>
+</tr>
+<tr>
+<td>Information integration</td>
+<td>Joining contract, ERP and carrier records into one case</td>
+<td>Useful, mostly ordinary data work</td>
+</tr>
+<tr>
+<td>Reasoning</td>
+<td>Proposing a cause, drafting the case and supplier note, for a person to decide</td>
+<td>Helpful, human decides</td>
+</tr>
+<tr>
+<td>Prediction</td>
+<td>Spotting records likely to go stale before they cause a mismatch</td>
+<td>Speculative value</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Possible today, with review:</strong> reading contracts into a price file with sign-off, classifying causes, gathering evidence, drafting. Evidence is preprints and vendor claims only. I found no independent evaluation of AI match performance.</p>
+<p><strong>Would need better proof:</strong> unattended decisions to withhold or recover money, judging whether an unusual charge is legitimate, and resisting adversaries who probe the model. A model should never sit in the payment calculation. Generative tools also make convincing fake invoices cheaper, which favors controls that do not depend on a document looking right. <strong>Speculative.</strong></p>
+<h1 id="the-evidence">11. The Evidence</h1>
+<p><strong>Actual tests (reproducible, in <code>research/tests/</code>).</strong> All synthetic, using no company data.</p>
+<p><em>Baseline: verified figures. Self-reported surveys unless noted.</em></p>
+<table>
+<thead>
+<tr>
+<th>Measure</th>
+<th>Figure</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cost per invoice</td>
+<td>$6.50 median; $9.84 average</td>
+<td>APQC n=6,546; Ardent 2025 n=204</td>
+</tr>
+<tr>
+<td>Invoice lines matched first time</td>
+<td>75.0% median</td>
+<td>APQC n=4,438</td>
+</tr>
+<tr>
+<td>Exception rate (broader than match failure)</td>
+<td>18.4%</td>
+<td>Ardent 2025</td>
+</tr>
+<tr>
+<td>No human touch</td>
+<td>35.4%</td>
+<td>Ardent 2025</td>
+</tr>
+<tr>
+<td>Invoice receipt to payment</td>
+<td>15.0 days median</td>
+<td>APQC n=2,226</td>
+</tr>
+<tr>
+<td>Duplicate or erroneous disbursements</td>
+<td>1.5% median, by count, not dollars</td>
+<td>APQC n=2,386</td>
+</tr>
+<tr>
+<td>Staff time on supplier inquiries</td>
+<td>21.9%</td>
+<td>Ardent 2025</td>
+</tr>
+<tr>
+<td>Blocks: share of items; median length</td>
+<td>26.5%; 6.2 days</td>
+<td>BPI 2019 log, one company, tabulated for this study</td>
+</tr>
+</tbody>
+</table>
+<p>The conflicting Ardent exception rates resolve: 18.4% is the 2025 average, 22% is the 2024 “All Others” group, and 14% is a printed 2024 average that does not fit its own subgroups. None measures match failure. No public source gives cost per exception, root causes from an original survey, loss prevented by the match, or a dollar split of real against harmless mismatch. That is the largest gap in the field.</p>
+<p><em>Policies compared at moderate friction (reviewer’s step 3), per 100,000 invoices, spend about $534 million.</em></p>
+<table>
+<thead>
+<tr>
+<th>Policy</th>
+<th>Buyer cost</th>
+<th>Joint buyer and supplier</th>
+<th>Overpaid</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T: wider tolerance</td>
+<td>$374,052</td>
+<td>$550,865</td>
+<td>$124,822</td>
+</tr>
+<tr>
+<td>T+: fair simple fix (batched, one-sided, record fixes)</td>
+<td>$300,501</td>
+<td>$453,389</td>
+<td>$129,437</td>
+</tr>
+<tr>
+<td>A+: true sampling audit</td>
+<td>$346,191</td>
+<td>$449,057</td>
+<td>$221,413</td>
+</tr>
+<tr>
+<td>U: pay the lesser, buyer works it, with foresight</td>
+<td>$329,759</td>
+<td>$481,171</td>
+<td>$90,956</td>
+</tr>
+<tr>
+<td>L: lesser-of, supplier claims (rejected)</td>
+<td>$290,851</td>
+<td>$576,440</td>
+<td>$90,296</td>
+</tr>
+<tr>
+<td><strong>S: Split Settlement</strong></td>
+<td><strong>$277,899</strong></td>
+<td><strong>$440,495</strong></td>
+<td>$112,241</td>
+</tr>
+<tr>
+<td>Tc: T+ with clean records</td>
+<td>$188,740</td>
+<td>$291,592</td>
+<td>$70,214</td>
+</tr>
+<tr>
+<td><strong>Sc: Split Settlement with clean records</strong></td>
+<td><strong>$179,596</strong></td>
+<td><strong>$281,824</strong></td>
+<td>$55,392</td>
+</tr>
+</tbody>
+</table>
+<p><em>240 random worlds, the reviewer’s ranges. A range is not a probability.</em></p>
+<table>
+<thead>
+<tr>
+<th>S is lower than</th>
+<th>T</th>
+<th>T+</th>
+<th>A+</th>
+<th>U</th>
+<th>L</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Buyer cost</td>
+<td>240</td>
+<td>198</td>
+<td>110</td>
+<td>235</td>
+<td>187</td>
+</tr>
+<tr>
+<td>Joint cost</td>
+<td>232</td>
+<td>144</td>
+<td><strong>18</strong></td>
+<td>121</td>
+<td>239</td>
+</tr>
+<tr>
+<td>Overpaid</td>
+<td>238</td>
+<td>240</td>
+<td>160</td>
+<td>3</td>
+<td>78</td>
+</tr>
+</tbody>
+</table>
+<p><strong>How to read this honestly.</strong></p>
+<ul>
+<li>S beat the simple fix in 144 of 240 worlds on joint cost. That is a lean, not a win.</li>
+<li><strong>The sampling audit beat S on joint cost in 222 of 240 worlds.</strong> It is a serious rival. I still prefer S because A+ leaks about twice as much at step 3, its model assumes 80% recovery plus penalties with no supplier failure, and I found no public company whose auditor accepted it. Those are arguments, not test results.</li>
+<li><strong>S was changed after its first run failed.</strong> Run 1 lost to the simple fix at every step of the reviewer’s ladder. Part of that was a bug: underbilled suppliers had no way to rebill. I then widened its pass limit to match T+ and cut its audit depth from 0.5 to 0.1 looks per supplier-period. At depth 0.5 it loses to T+ by about $71,000 joint. Run 1 is kept in <code>final-output-run1.txt</code>. This tuning is a real weakness, and the proposer wrote S.</li>
+<li>S loses to T+ on joint when supplier reconciliation cost passes about $14 per short-paid invoice (interpolated; about $24 if suppliers pass back half their cost), when buyer records are very dirty (15% or more of invoices), when records are already very clean (1%), and when nearly all differences clear inside terms.</li>
+<li>Its advantage over T+ at 5% padders rests on model padders who stop once revoked. Real ones might re-enter under a new name.</li>
+</ul>
+<p><strong>Controlled thought experiments. Reasoned, not tested, except where noted.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Conventional</th>
+<th>Simple fix</th>
+<th>Split Settlement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Normal: repeat supplier, all agree</td>
+<td>Pays</td>
+<td>Pays</td>
+<td>Pays. No difference at all</td>
+</tr>
+<tr>
+<td>2. Multiple systems: price raised in the contract system, ERP stale, 40 invoices</td>
+<td>40 full invoices stopped, 40 chases</td>
+<td>One batched case, invoices still held</td>
+<td>One case, one fix, all lines correct. If unfixed at due date, each pays at the old price and the rest follows. Supplier reconciliation cost is the risk (tested)</td>
+</tr>
+<tr>
+<td>3. Missing or conflicting: split shipment, receipt late</td>
+<td>Invoice held</td>
+<td>Invoice held</td>
+<td>Received part pays, the rest trues up. A wholly late receipt still stops payment. <strong>Not solved</strong></td>
+</tr>
+<tr>
+<td>4. Changing meaning: “received” now means a requester clicked to clear a block</td>
+<td>Passes silently</td>
+<td>Passes silently</td>
+<td>Passes silently in steps 1 to 7. Only the random audit can see it. Services stay out of scope for this reason</td>
+</tr>
+<tr>
+<td>5. Adversarial: supplier bills to the limit every time</td>
+<td>Leaks up to tight tolerance</td>
+<td>Leaks up to the wide limit, forever</td>
+<td>Pass revoked (tested). A forged receipt with insider collusion beats all three. Bank diversion is caught only by the payee gate</td>
+</tr>
+<tr>
+<td>6. Scale and failure: bad price upload hits 50,000 lines</td>
+<td>Mass stops, visible, nobody paid</td>
+<td>Mass stops</td>
+<td>Without step 8, mass short payments. Step 8 is what makes this safe, and it is untested</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Formal checks.</strong> <code>check_properties.py</code> confirms by exhaustive arithmetic that under a lesser-of payment rule one wrong record alone never causes overpayment. The reviewer correctly noted that this is close to a tautology and proves nothing about business outcomes. No business result here is proven in any mathematical sense.</p>
+<h1 id="the-strongest-objections">12. The Strongest Objections</h1>
+<p><strong>“GAO already said it: automation makes relaxation unnecessary.”</strong> Fair for sampling. GAO’s point concerns the cost of comparing, which this process keeps. It does not address the cost of the stop.</p>
+<p><strong>“This is just tolerance plus partial pay, a configuration change.”</strong> Largely true. It uses existing functions and known ideas. Hammer and Champy wrote in 1993 that controls may “tolerate modest and limited abuse”. The contribution is the separation of the four decisions and the evidence on where the money is, not a new mechanism. I accept this objection.</p>
+<p><strong>“Stops are mostly harmless because they finish inside terms.”</strong> Possibly. Median block length was 6.2 days against about 30 to 44 days to clear in the one log. If so, the whole-invoice hold costs little, and S’s gain shrinks. In the model it falls to about nothing when almost all stops clear in time.</p>
+<p><strong>“Partial payment creates supplier work.”</strong> Yes. Reconciling a part-paid invoice is real cost, unmeasured anywhere. Above about $14 per item S loses on joint cost. That is a low bar, and the most likely way this design fails.</p>
+<p><strong>“The buyer loses the pressure a stop creates to fix records.”</strong> Serious. A stop forces attention. S replaces this with case ownership and reporting, which may be weaker in a real organization.</p>
+<p><strong>“Min-style payment hides the case where the record is too high.”</strong> Correct for a plain lesser-of rule, so S compares both ways and logs it. A control over the record itself is required. PCAOB AS 1105 requires testing of company-produced information.</p>
+<p><strong>“Your simulation was written by the person proposing the answer.”</strong> True, and it was tuned once. That is why an independent reviewer attacked it, why the failed runs are kept, and why I claim only a modest result.</p>
+<p><strong>Accounting and legal questions, all needing a professional to confirm.</strong> Liability completeness for open differences (ASC 405, ASC 450), sales and use tax when paid differs from invoiced, unclaimed property on aged differences, and contract terms for partial payment. The legal readings here are mine, not counsel’s.</p>
+<h1 id="economic-and-operational-implications">13. Economic and Operational Implications</h1>
+<p><strong>Benefits, if the model’s shape holds.</strong> Fewer full-invoice stops, fewer late payments, better discount capture, one case in place of many, the safe harbor closed, and a measured error rate for the first time.</p>
+<p><strong>Costs.</strong> Case and record ownership work in purchasing, supplier reconciliation, contract language, a new accrual routine, and the audit step. Implementation cost is not modeled and could erase a gain of 0.2 basis points. On $534 million of spend that is about $12,000, which would not pay for a project.</p>
+<p><strong>So the rule change alone does not justify itself unless strategic overbilling is real.</strong> The record-cleaning effect might, and it needs no redesign. An organization could capture most of the modeled benefit by working the top causes of blocks.</p>
+<p><strong>Organizational effect.</strong> Accountability moves from AP clerks chasing documents toward purchasing owning record accuracy. That is the hard part, and it is a change in who gets blamed.</p>
+<p><strong>Commercial note, stated neutrally.</strong> Since the core is deterministic and available in existing ERPs, this does not obviously imply a new product. Measuring the true causes of blocks in dollars is a real unmet need. What to do with that is your decision.</p>
+<h1 id="the-verdict">14. The Verdict</h1>
+<p><strong>Outcome: B. Meaningful optimization.</strong></p>
+<p>The fundamental logic of the match is sound and survives: authority, independent evidence, universal comparison, resolution by someone without a conflict, proof. One clause was overextended in practice, and the surrounding routine can improve.</p>
+<p>I considered C (structural redesign) and did not earn it: the gain over a simple fix is inside the noise unless strategic overbilling exists. I considered D (elimination): <strong>Rejected</strong>, since no precedent omits verification. E (purpose transformation) is the most interesting open possibility, but it rests on one company’s log.</p>
+<table>
+<thead>
+<tr>
+<th>Finding</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No US statute, SEC rule or PCAOB text read names the match</td>
+<td>Established</td>
+</tr>
+<tr>
+<td>The form is not necessary; the core is</td>
+<td>Established for the form, Supported hypothesis for the core</td>
+</tr>
+<tr>
+<td>Lesser-of settlement is a new discovery</td>
+<td>Rejected</td>
+</tr>
+<tr>
+<td>Shifting the burden to suppliers is efficient</td>
+<td>Rejected (synthetic, plus real abuse record)</td>
+</tr>
+<tr>
+<td>Holding the whole invoice is unnecessary</td>
+<td>Supported hypothesis</td>
+</tr>
+<tr>
+<td>A watched limit closes the tolerance safe harbor</td>
+<td>Supported hypothesis (synthetic)</td>
+</tr>
+<tr>
+<td>Most blocks reflect buyer records, not supplier error</td>
+<td>Supported hypothesis (one company)</td>
+</tr>
+<tr>
+<td>Split Settlement beats the simple fix on honest suppliers</td>
+<td>Speculative: inside model noise</td>
+</tr>
+<tr>
+<td>Record quality matters more than the rule</td>
+<td>Supported hypothesis (synthetic, cleaning cost excluded)</td>
+</tr>
+<tr>
+<td>The match should be eliminated</td>
+<td>Rejected</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Confidence.</strong> High that the match is custom rather than law and that its core survives. Moderate that the whole-invoice hold is unnecessary. Low on any dollar figure.</p>
+<p><strong>Most important unresolved.</strong> The dollar split of blocks by true cause. How much overbilling sits just under tolerances. What a part-paid invoice costs a supplier. Whether an auditor would accept the design. No auditor, lawyer or supplier was consulted.</p>
+<p><strong>The redesign should be rejected if:</strong> a dollar-weighted study shows most blocks catch real supplier errors; supplier reconciliation cost exceeds about $14 per part-paid invoice; suppliers raise prices by more than a fraction of a basis point; its gain disappears against a well-run simple fix after implementation cost; or auditors will not accept it.</p>
+<h1 id="the-next-experiment">15. The Next Experiment</h1>
+<p><strong>Blind cause audit of payment blocks.</strong> Do not build anything. This one test settles the central finding, and it is cheap.</p>
+<p><strong>Evidence required.</strong> At one or two willing US companies, a random, dollar-stratified sample of about 1,000 blocked invoices from the past year, and an equal sample of invoices that passed, with contracts and receipts. For passed invoices, include amounts just under tolerance.</p>
+<p><strong>Conditions.</strong> Reviewers independent of AP and purchasing assign each item a true cause and a true amount owed, blind to how it was resolved. Add a seeded set of known errors in a test copy to measure what the match really catches.</p>
+<p><strong>Measurements.</strong> Dollars by cause (supplier error, buyer record, timing, legitimate change); share of blocks clearing inside terms; true error in passed invoices; clustering of overbills just under tolerance; catch rate on seeded errors.</p>
+<p><strong>Success criteria for the central finding.</strong> More than half of blocked dollars trace to buyer records or timing, fewer than one in five to real supplier overbilling, and most blocks would have delayed a payment that was right.</p>
+<p><strong>Falsified if.</strong> Real supplier overbilling accounts for most blocked dollars, or passed invoices show no clustering under the tolerance and no meaningful true error, in which case the simple fix is enough.</p>
+<p>The public BPI 2019 log can be used first at no cost to refine the method, though it lacks dollar values.</p>
+<h1 id="the-one-question-that-changes-everything">16. The One Question That Changes Everything</h1>
+<p><strong>If most invoices you stop turn out to be right, whose records are you really checking?</strong></p>
+<h1 id="appendix-sources-and-limits">Appendix: Sources and Limits</h1>
+<p>The full evidence, with URLs, is in the repository under <code>research/agents/</code>: <code>01-conventional-model.md</code> (history, law, numbers), <code>02-assumptions.md</code> (ledger, theory), <code>03-alternatives.md</code>, <code>04-prior-art.md</code>, <code>05-adversarial.md</code> (attack and legal analysis). Tests and outputs are in <code>research/tests/</code> and <code>research/</code>.</p>
+<p>Key primary sources: 15 USC 78m(b); SOX 302 and 404; 17 CFR 240.13a-15(f); SEC Release 33-8810; PCAOB AS 2201 and AS 1105; UCC 2-310, 2-513, 2-606, 2-607, 2-717; FAR 13.4; 42 CFR 414.21; GAO/AIMD-21.3.2 (2000); GAO-01-309; Kirkman (1887); Montgomery (1912); Griffith (1917); AIA, Internal Control (1949); Hammer (1990); Hammer and Champy (1993, read in 2001 edition); UK Groceries Code Adjudicator, Tesco report (2016); HHS OIG OEI-09-16-00410; SEC Release 34-46099 (Rite Aid); Kogan et al. (2014); Jans et al. (2014); BPI Challenge 2019 event log, DOI 10.4121/uuid:d06aff4b-79f0-45e6-8ec8-e19730c248f1.</p>
+<p><strong>Could not be verified.</strong> COSO 2013 full text. The live AS 2201 page in some lines (read through a 2007 filing and an archive copy). ASC text. EU Directive 2019/633. Several theory papers read only in abstract. Retail deduction rules, from vendor sources only. Ford’s numbers, which trace only to Hammer. OpenAI’s two index pages returned 403, though a summary of the <code>openai/math</code> repository was reviewed. The inspiration was its practice of keeping results open to verification and revision, not any undisclosed method. Nothing here claims access to private techniques.</p>
+<p>Evidence is limited to what could be reached in one working session. Claims that something was not found mean not found here, not proof of absence.</p>
+</body>
+</html>

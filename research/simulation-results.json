@@ -1,0 +1,766 @@
+{
+ "params": {
+  "n": 120000,
+  "periods": 12,
+  "suppliers": 1500,
+  "new_share": 0.1,
+  "value_median": 1500.0,
+  "value_sigma": 1.6,
+  "mismatch_rate": 0.2,
+  "genuine_share": 0.1,
+  "harmless_up_bias": 0.5,
+  "harmless_var": 0.015,
+  "genuine_var": 0.04,
+  "dup_rate": 0.002,
+  "dup_check": 0.95,
+  "fake_rate": 0.0002,
+  "collusive_rate": 5e-05,
+  "touch_cost": 30.0,
+  "discount_share": 0.05,
+  "discount": 0.02,
+  "recov_known": 0.9,
+  "recov_new": 0.3,
+  "recov_fraud": 0.1,
+  "tight_pct": 0.01,
+  "tight_abs": 50.0,
+  "wide_pct": 0.02,
+  "wide_abs": 150.0,
+  "autopay_cap": 25000.0,
+  "autopay_var_cap": 500.0,
+  "sample": 0.05,
+  "z_flag": 3.0,
+  "min_n": 5,
+  "ers_eligible": 0.6,
+  "ers_residual": 0.3,
+  "adversary_share": 0.0,
+  "adversary_every": 1
+ },
+ "results": {
+  "base": {
+   "A": {
+    "policy": "A",
+    "labor": 349658.3333333333,
+    "unrecovered_loss": 135163.7447698338,
+    "lost_discount": 85899.03290309214,
+    "total": 570721.1110062593,
+    "human_touches": 11655.27777777778,
+    "blocked": 11640.27777777778,
+    "genuine": 1983.3333333333333,
+    "genuine_never_examined": 369.72222222222223
+   },
+   "B": {
+    "policy": "B",
+    "labor": 201241.66666666666,
+    "unrecovered_loss": 147547.51510084642,
+    "lost_discount": 64327.82821784347,
+    "total": 413117.0099853566,
+    "human_touches": 6708.055555555556,
+    "blocked": 6693.055555555556,
+    "genuine": 1983.3333333333333,
+    "genuine_never_examined": 718.3333333333334
+   },
+   "B2": {
+    "policy": "B2",
+    "labor": 201983.33333333334,
+    "unrecovered_loss": 147475.45415848683,
+    "lost_discount": 64327.82821784347,
+    "total": 413786.6157096636,
+    "human_touches": 6732.777777777778,
+    "blocked": 6693.055555555556,
+    "genuine": 1983.3333333333333,
+    "genuine_never_examined": 718.3333333333334
+   },
+   "C": {
+    "policy": "C",
+    "labor": 105791.66666666667,
+    "unrecovered_loss": 239971.533084756,
+    "lost_discount": 52834.065166524495,
+    "total": 398597.2649179471,
+    "human_touches": 3526.388888888889,
+    "blocked": 2169.1666666666665,
+    "genuine": 1983.3333333333333,
+    "genuine_never_examined": 1509.4444444444446
+   },
+   "D": {
+    "policy": "D",
+    "labor": 255700.0,
+    "unrecovered_loss": 133531.27401562105,
+    "lost_discount": 45542.74981966411,
+    "total": 434774.02383528516,
+    "human_touches": 8523.333333333334,
+    "blocked": 5849.166666666667,
+    "genuine": 1983.3333333333333,
+    "genuine_never_examined": 186.94444444444446
+   },
+   "E": {
+    "policy": "E",
+    "labor": 2816.6666666666665,
+    "unrecovered_loss": 590774.2363516615,
+    "lost_discount": 0.0,
+    "total": 593590.9030183281,
+    "human_touches": 93.8888888888889,
+    "blocked": 0.0,
+    "genuine": 1983.3333333333333,
+    "genuine_never_examined": 0.0
+   }
+  },
+  "genuine_1pct": {
+   "A": {
+    "policy": "A",
+    "labor": 336208.3333333333,
+    "unrecovered_loss": 33076.17589750941,
+    "lost_discount": 82277.46434047341,
+    "total": 451561.97357131616,
+    "human_touches": 11206.944444444445,
+    "blocked": 11188.333333333334,
+    "genuine": 196.94444444444446,
+    "genuine_never_examined": 38.05555555555556
+   },
+   "B": {
+    "policy": "B",
+    "labor": 182425.0,
+    "unrecovered_loss": 34275.43274617897,
+    "lost_discount": 59023.96418080068,
+    "total": 275724.3969269797,
+    "human_touches": 6080.833333333333,
+    "blocked": 6062.222222222223,
+    "genuine": 196.94444444444446,
+    "genuine_never_examined": 73.05555555555556
+   },
+   "B2": {
+    "policy": "B2",
+    "labor": 192241.66666666666,
+    "unrecovered_loss": 34224.832671384844,
+    "lost_discount": 59023.96418080068,
+    "total": 285490.4635188522,
+    "human_touches": 6408.055555555556,
+    "blocked": 6062.222222222223,
+    "genuine": 196.94444444444446,
+    "genuine_never_examined": 73.05555555555556
+   },
+   "C": {
+    "policy": "C",
+    "labor": 93383.33333333333,
+    "unrecovered_loss": 44788.15657481657,
+    "lost_discount": 49009.43414967641,
+    "total": 187180.9240578263,
+    "human_touches": 3112.777777777778,
+    "blocked": 2017.777777777778,
+    "genuine": 196.94444444444446,
+    "genuine_never_examined": 153.33333333333334
+   },
+   "D": {
+    "policy": "D",
+    "labor": 256975.0,
+    "unrecovered_loss": 32877.64681577674,
+    "lost_discount": 41475.54886289724,
+    "total": 331328.195678674,
+    "human_touches": 8565.833333333334,
+    "blocked": 5586.944444444445,
+    "genuine": 196.94444444444446,
+    "genuine_never_examined": 17.77777777777778
+   },
+   "E": {
+    "policy": "E",
+    "labor": 175.0,
+    "unrecovered_loss": 136000.13672771814,
+    "lost_discount": 0.0,
+    "total": 136175.13672771814,
+    "human_touches": 5.833333333333333,
+    "blocked": 0.0,
+    "genuine": 196.94444444444446,
+    "genuine_never_examined": 0.0
+   }
+  },
+  "genuine_30pct": {
+   "A": {
+    "policy": "A",
+    "labor": 377766.6666666667,
+    "unrecovered_loss": 148052.80856861142,
+    "lost_discount": 81976.10113274334,
+    "total": 607795.5763680214,
+    "human_touches": 12592.222222222224,
+    "blocked": 12573.055555555557,
+    "genuine": 5945.0,
+    "genuine_never_examined": 1176.111111111111
+   },
+   "B": {
+    "policy": "B",
+    "labor": 239775.0,
+    "unrecovered_loss": 183426.3998682889,
+    "lost_discount": 64104.97155990537,
+    "total": 487306.3714281942,
+    "human_touches": 7992.5,
+    "blocked": 7973.333333333333,
+    "genuine": 5945.0,
+    "genuine_never_examined": 2191.388888888889
+   },
+   "B2": {
+    "policy": "B2",
+    "labor": 259825.0,
+    "unrecovered_loss": 180994.41589038257,
+    "lost_discount": 64104.97155990537,
+    "total": 504924.3874502879,
+    "human_touches": 8660.833333333334,
+    "blocked": 7973.333333333333,
+    "genuine": 5945.0,
+    "genuine_never_examined": 2191.388888888889
+   },
+   "C": {
+    "policy": "C",
+    "labor": 194908.33333333334,
+    "unrecovered_loss": 404755.3226744028,
+    "lost_discount": 48316.28293853392,
+    "total": 647979.93894627,
+    "human_touches": 6496.944444444445,
+    "blocked": 2468.3333333333335,
+    "genuine": 5945.0,
+    "genuine_never_examined": 3731.1111111111113
+   },
+   "D": {
+    "policy": "D",
+    "labor": 253175.0,
+    "unrecovered_loss": 142735.86670613175,
+    "lost_discount": 39938.21637274755,
+    "total": 435849.08307887934,
+    "human_touches": 8439.166666666666,
+    "blocked": 6332.5,
+    "genuine": 5945.0,
+    "genuine_never_examined": 595.2777777777778
+   },
+   "E": {
+    "policy": "E",
+    "labor": 8658.333333333334,
+    "unrecovered_loss": 1440204.9785207578,
+    "lost_discount": 0.0,
+    "total": 1448863.3118540912,
+    "human_touches": 288.61111111111114,
+    "blocked": 0.0,
+    "genuine": 5945.0,
+    "genuine_never_examined": 0.0
+   }
+  },
+  "genuine_60pct": {
+   "A": {
+    "policy": "A",
+    "labor": 421633.3333333333,
+    "unrecovered_loss": 182434.34941411958,
+    "lost_discount": 88828.19098501636,
+    "total": 692895.8737324692,
+    "human_touches": 14054.444444444445,
+    "blocked": 14035.833333333334,
+    "genuine": 11913.611111111111,
+    "genuine_never_examined": 2378.888888888889
+   },
+   "B": {
+    "policy": "B",
+    "labor": 299941.6666666667,
+    "unrecovered_loss": 254288.66306733337,
+    "lost_discount": 73895.14683182097,
+    "total": 628125.476565821,
+    "human_touches": 9998.055555555557,
+    "blocked": 9979.444444444445,
+    "genuine": 11913.611111111111,
+    "genuine_never_examined": 4381.111111111111
+   },
+   "B2": {
+    "policy": "B2",
+    "labor": 356191.6666666667,
+    "unrecovered_loss": 237809.91288172422,
+    "lost_discount": 73895.14683182097,
+    "total": 667896.7263802119,
+    "human_touches": 11873.055555555557,
+    "blocked": 9979.444444444445,
+    "genuine": 11913.611111111111,
+    "genuine_never_examined": 4381.111111111111
+   },
+   "C": {
+    "policy": "C",
+    "labor": 269975.0,
+    "unrecovered_loss": 613844.3000423954,
+    "lost_discount": 55624.77773725514,
+    "total": 939444.0777796503,
+    "human_touches": 8999.166666666666,
+    "blocked": 2864.1666666666665,
+    "genuine": 11913.611111111111,
+    "genuine_never_examined": 6250.0
+   },
+   "D": {
+    "policy": "D",
+    "labor": 248758.33333333334,
+    "unrecovered_loss": 171670.93801854205,
+    "lost_discount": 45813.43569817717,
+    "total": 466242.70705005265,
+    "human_touches": 8291.944444444445,
+    "blocked": 7075.555555555556,
+    "genuine": 11913.611111111111,
+    "genuine_never_examined": 1191.6666666666667
+   },
+   "E": {
+    "policy": "E",
+    "labor": 17941.666666666668,
+    "unrecovered_loss": 2786066.3862325693,
+    "lost_discount": 0.0,
+    "total": 2804008.052899236,
+    "human_touches": 598.0555555555555,
+    "blocked": 0.0,
+    "genuine": 11913.611111111111,
+    "genuine_never_examined": 0.0
+   }
+  },
+  "low_recovery": {
+   "A": {
+    "policy": "A",
+    "labor": 349658.3333333333,
+    "unrecovered_loss": 166958.16339172184,
+    "lost_discount": 85899.03290309214,
+    "total": 602515.5296281474,
+    "human_touches": 11655.27777777778,
+    "blocked": 11640.27777777778,
+    "genuine": 1983.3333333333333,
+    "genuine_never_examined": 369.72222222222223
+   },
+   "B": {
+    "policy": "B",
+    "labor": 201241.66666666666,
+    "unrecovered_loss": 179341.93372273436,
+    "lost_discount": 64327.82821784347,
+    "total": 444911.4286072445,
+    "human_touches": 6708.055555555556,
+    "blocked": 6693.055555555556,
+    "genuine": 1983.3333333333333,
+    "genuine_never_examined": 718.3333333333334
+   },
+   "B2": {
+    "policy": "B2",
+    "labor": 201983.33333333334,
+    "unrecovered_loss": 179307.92237804786,
+    "lost_discount": 64327.82821784347,
+    "total": 445619.0839292247,
+    "human_touches": 6732.777777777778,
+    "blocked": 6693.055555555556,
+    "genuine": 1983.3333333333333,
+    "genuine_never_examined": 718.3333333333334
+   },
+   "C": {
+    "policy": "C",
+    "labor": 105791.66666666667,
+    "unrecovered_loss": 277102.50501799583,
+    "lost_discount": 52834.065166524495,
+    "total": 435728.236851187,
+    "human_touches": 3526.388888888889,
+    "blocked": 2169.1666666666665,
+    "genuine": 1983.3333333333333,
+    "genuine_never_examined": 1509.4444444444446
+   },
+   "D": {
+    "policy": "D",
+    "labor": 255700.0,
+    "unrecovered_loss": 165325.69263750906,
+    "lost_discount": 45542.74981966411,
+    "total": 466568.4424571732,
+    "human_touches": 8523.333333333334,
+    "blocked": 5849.166666666667,
+    "genuine": 1983.3333333333333,
+    "genuine_never_examined": 186.94444444444446
+   },
+   "E": {
+    "policy": "E",
+    "labor": 2816.6666666666665,
+    "unrecovered_loss": 639291.9030571269,
+    "lost_discount": 0.0,
+    "total": 642108.5697237935,
+    "human_touches": 93.8888888888889,
+    "blocked": 0.0,
+    "genuine": 1983.3333333333333,
+    "genuine_never_examined": 0.0
+   }
+  },
+  "adversary_1pct_suppliers": {
+   "A": {
+    "policy": "A",
+    "labor": 347916.6666666667,
+    "unrecovered_loss": 146689.6788357352,
+    "lost_discount": 85585.13495554659,
+    "total": 580191.4804579485,
+    "human_touches": 11597.222222222224,
+    "blocked": 11582.222222222224,
+    "genuine": 2470.555555555556,
+    "genuine_never_examined": 858.0555555555557
+   },
+   "B": {
+    "policy": "B",
+    "labor": 200375.0,
+    "unrecovered_loss": 174025.90752260672,
+    "lost_discount": 64126.42765903787,
+    "total": 438527.3351816446,
+    "human_touches": 6679.166666666667,
+    "blocked": 6664.166666666667,
+    "genuine": 2470.555555555556,
+    "genuine_never_examined": 1206.111111111111
+   },
+   "B2": {
+    "policy": "B2",
+    "labor": 212758.33333333334,
+    "unrecovered_loss": 154717.33708280287,
+    "lost_discount": 64126.42765903787,
+    "total": 431602.0980751741,
+    "human_touches": 7091.944444444445,
+    "blocked": 6664.166666666667,
+    "genuine": 2470.555555555556,
+    "genuine_never_examined": 1206.111111111111
+   },
+   "C": {
+    "policy": "C",
+    "labor": 120283.33333333333,
+    "unrecovered_loss": 257500.47299011165,
+    "lost_discount": 54203.498223270835,
+    "total": 431987.30454671587,
+    "human_touches": 4009.444444444445,
+    "blocked": 2184.1666666666665,
+    "genuine": 2470.555555555556,
+    "genuine_never_examined": 1615.277777777778
+   },
+   "D": {
+    "policy": "D",
+    "labor": 254816.66666666666,
+    "unrecovered_loss": 140176.96569275548,
+    "lost_discount": 47193.45657750615,
+    "total": 442187.08893692825,
+    "human_touches": 8493.888888888889,
+    "blocked": 5853.055555555556,
+    "genuine": 2251.6666666666665,
+    "genuine_never_examined": 458.0555555555556
+   },
+   "E": {
+    "policy": "E",
+    "labor": 3591.6666666666665,
+    "unrecovered_loss": 650496.6188987292,
+    "lost_discount": 0.0,
+    "total": 654088.2855653958,
+    "human_touches": 119.72222222222223,
+    "blocked": 0.0,
+    "genuine": 2470.555555555556,
+    "genuine_never_examined": 0.0
+   }
+  },
+  "adversary_low_and_slow": {
+   "A": {
+    "policy": "A",
+    "labor": 349216.6666666667,
+    "unrecovered_loss": 138348.1274832062,
+    "lost_discount": 85813.17445310195,
+    "total": 573377.9686029748,
+    "human_touches": 11640.555555555557,
+    "blocked": 11625.555555555557,
+    "genuine": 2093.3333333333335,
+    "genuine_never_examined": 480.8333333333333
+   },
+   "B": {
+    "policy": "B",
+    "labor": 201025.0,
+    "unrecovered_loss": 153704.52303585908,
+    "lost_discount": 64233.50740123071,
+    "total": 418963.0304370898,
+    "human_touches": 6700.833333333333,
+    "blocked": 6685.833333333333,
+    "genuine": 2093.3333333333335,
+    "genuine_never_examined": 828.888888888889
+   },
+   "B2": {
+    "policy": "B2",
+    "labor": 202483.33333333334,
+    "unrecovered_loss": 152428.47473323348,
+    "lost_discount": 64233.50740123071,
+    "total": 419145.3154677975,
+    "human_touches": 6749.444444444445,
+    "blocked": 6685.833333333333,
+    "genuine": 2093.3333333333335,
+    "genuine_never_examined": 828.888888888889
+   },
+   "C": {
+    "policy": "C",
+    "labor": 109925.0,
+    "unrecovered_loss": 249458.4056129926,
+    "lost_discount": 52713.82332398391,
+    "total": 412097.2289369765,
+    "human_touches": 3664.1666666666665,
+    "blocked": 2173.0555555555557,
+    "genuine": 2093.3333333333335,
+    "genuine_never_examined": 1581.6666666666667
+   },
+   "D": {
+    "policy": "D",
+    "labor": 255841.66666666666,
+    "unrecovered_loss": 135786.0093251067,
+    "lost_discount": 47410.077457746665,
+    "total": 439037.75344952004,
+    "human_touches": 8528.055555555557,
+    "blocked": 5879.722222222223,
+    "genuine": 2043.6111111111113,
+    "genuine_never_examined": 250.0
+   },
+   "E": {
+    "policy": "E",
+    "labor": 2941.6666666666665,
+    "unrecovered_loss": 603481.4457332261,
+    "lost_discount": 0.0,
+    "total": 606423.1123998928,
+    "human_touches": 98.05555555555556,
+    "blocked": 0.0,
+    "genuine": 2093.3333333333335,
+    "genuine_never_examined": 0.0
+   }
+  },
+  "harmless_lean_against_buyer": {
+   "A": {
+    "policy": "A",
+    "labor": 349658.3333333333,
+    "unrecovered_loss": 135163.7447698338,
+    "lost_discount": 85899.03290309214,
+    "total": 570721.1110062593,
+    "human_touches": 11655.27777777778,
+    "blocked": 11640.27777777778,
+    "genuine": 1983.3333333333333,
+    "genuine_never_examined": 369.72222222222223
+   },
+   "B": {
+    "policy": "B",
+    "labor": 201241.66666666666,
+    "unrecovered_loss": 147547.51510084642,
+    "lost_discount": 64327.82821784347,
+    "total": 413117.0099853566,
+    "human_touches": 6708.055555555556,
+    "blocked": 6693.055555555556,
+    "genuine": 1983.3333333333333,
+    "genuine_never_examined": 718.3333333333334
+   },
+   "B2": {
+    "policy": "B2",
+    "labor": 289366.6666666667,
+    "unrecovered_loss": 144707.2474369729,
+    "lost_discount": 64327.82821784347,
+    "total": 498401.74232148303,
+    "human_touches": 9645.555555555557,
+    "blocked": 6693.055555555556,
+    "genuine": 1983.3333333333333,
+    "genuine_never_examined": 718.3333333333334
+   },
+   "C": {
+    "policy": "C",
+    "labor": 216308.33333333334,
+    "unrecovered_loss": 216246.92264666795,
+    "lost_discount": 52834.065166524495,
+    "total": 485389.32114652573,
+    "human_touches": 7210.277777777778,
+    "blocked": 2169.1666666666665,
+    "genuine": 1983.3333333333333,
+    "genuine_never_examined": 1150.5555555555557
+   },
+   "D": {
+    "policy": "D",
+    "labor": 255700.0,
+    "unrecovered_loss": 133531.27401562105,
+    "lost_discount": 45542.74981966411,
+    "total": 434774.02383528516,
+    "human_touches": 8523.333333333334,
+    "blocked": 5849.166666666667,
+    "genuine": 1983.3333333333333,
+    "genuine_never_examined": 186.94444444444446
+   },
+   "E": {
+    "policy": "E",
+    "labor": 2816.6666666666665,
+    "unrecovered_loss": 590774.2363516615,
+    "lost_discount": 0.0,
+    "total": 593590.9030183281,
+    "human_touches": 93.8888888888889,
+    "blocked": 0.0,
+    "genuine": 1983.3333333333333,
+    "genuine_never_examined": 0.0
+   }
+  },
+  "grid": {
+   "g=0.01,rec=0.2,c=30.0": {
+    "A": 463457,
+    "B": 292311,
+    "B2": 292311,
+    "C": 186603
+   },
+   "g=0.01,rec=0.2,c=60.0": {
+    "A": 799982,
+    "B": 475461,
+    "B2": 475461,
+    "C": 271878
+   },
+   "g=0.01,rec=0.5,c=30.0": {
+    "A": 459151,
+    "B": 288005,
+    "B2": 288005,
+    "C": 182240
+   },
+   "g=0.01,rec=0.5,c=60.0": {
+    "A": 795676,
+    "B": 471155,
+    "B2": 471155,
+    "C": 267515
+   },
+   "g=0.01,rec=0.9,c=30.0": {
+    "A": 453410,
+    "B": 282265,
+    "B2": 282265,
+    "C": 176424
+   },
+   "g=0.01,rec=0.9,c=60.0": {
+    "A": 789935,
+    "B": 465415,
+    "B2": 465415,
+    "C": 261699
+   },
+   "g=0.05,rec=0.2,c=30.0": {
+    "A": 493519,
+    "B": 326433,
+    "B2": 338719,
+    "C": 253652
+   },
+   "g=0.05,rec=0.2,c=60.0": {
+    "A": 844069,
+    "B": 523083,
+    "B2": 547744,
+    "C": 342452
+   },
+   "g=0.05,rec=0.5,c=30.0": {
+    "A": 482031,
+    "B": 314945,
+    "B2": 327096,
+    "C": 241374
+   },
+   "g=0.05,rec=0.5,c=60.0": {
+    "A": 832581,
+    "B": 511595,
+    "B2": 536121,
+    "C": 330174
+   },
+   "g=0.05,rec=0.9,c=30.0": {
+    "A": 466713,
+    "B": 299626,
+    "B2": 311599,
+    "C": 225002
+   },
+   "g=0.05,rec=0.9,c=60.0": {
+    "A": 817263,
+    "B": 496276,
+    "B2": 520624,
+    "C": 313802
+   },
+   "g=0.1,rec=0.2,c=30.0": {
+    "A": 526864,
+    "B": 364830,
+    "B2": 364830,
+    "C": 338739
+   },
+   "g=0.1,rec=0.2,c=60.0": {
+    "A": 875089,
+    "B": 563580,
+    "B2": 563580,
+    "C": 428364
+   },
+   "g=0.1,rec=0.5,c=30.0": {
+    "A": 515617,
+    "B": 353582,
+    "B2": 353582,
+    "C": 325720
+   },
+   "g=0.1,rec=0.5,c=60.0": {
+    "A": 863842,
+    "B": 552332,
+    "B2": 552332,
+    "C": 415345
+   },
+   "g=0.1,rec=0.9,c=30.0": {
+    "A": 500621,
+    "B": 338586,
+    "B2": 338586,
+    "C": 308360
+   },
+   "g=0.1,rec=0.9,c=60.0": {
+    "A": 848846,
+    "B": 537336,
+    "B2": 537336,
+    "C": 397985
+   },
+   "g=0.3,rec=0.2,c=30.0": {
+    "A": 569999,
+    "B": 450727,
+    "B2": 463972,
+    "C": 650127
+   },
+   "g=0.3,rec=0.2,c=60.0": {
+    "A": 954599,
+    "B": 692227,
+    "B2": 719122,
+    "C": 809427
+   },
+   "g=0.3,rec=0.5,c=30.0": {
+    "A": 555674,
+    "B": 436401,
+    "B2": 449041,
+    "C": 618780
+   },
+   "g=0.3,rec=0.5,c=60.0": {
+    "A": 940274,
+    "B": 677901,
+    "B2": 704191,
+    "C": 778080
+   },
+   "g=0.3,rec=0.9,c=30.0": {
+    "A": 536573,
+    "B": 417301,
+    "B2": 429132,
+    "C": 576984
+   },
+   "g=0.3,rec=0.9,c=60.0": {
+    "A": 921173,
+    "B": 658801,
+    "B2": 684282,
+    "C": 736284
+   },
+   "g=0.6,rec=0.2,c=30.0": {
+    "A": 605597,
+    "B": 538551,
+    "B2": 556054,
+    "C": 988508
+   },
+   "g=0.6,rec=0.2,c=60.0": {
+    "A": 1039622,
+    "B": 842526,
+    "B2": 878629,
+    "C": 1199633
+   },
+   "g=0.6,rec=0.5,c=30.0": {
+    "A": 597767,
+    "B": 530720,
+    "B2": 546579,
+    "C": 932239
+   },
+   "g=0.6,rec=0.5,c=60.0": {
+    "A": 1031792,
+    "B": 834695,
+    "B2": 869154,
+    "C": 1143364
+   },
+   "g=0.6,rec=0.9,c=30.0": {
+    "A": 587326,
+    "B": 520279,
+    "B2": 533946,
+    "C": 857212
+   },
+   "g=0.6,rec=0.9,c=60.0": {
+    "A": 1021351,
+    "B": 824254,
+    "B2": 856521,
+    "C": 1068337
+   }
+  }
+ }
+}
